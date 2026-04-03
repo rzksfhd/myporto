@@ -1,0 +1,30 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "myporto",
+	"main": "./src/worker.ts",
+	"compatibility_date": "2026-03-29",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "db_porto","database_id": "8f2d07c6-18e6-4fc3-af18-48afc6d0be10",
+			// Run `wrangler d1 create my-emdash-site` and paste the ID here
+		},
+	],
+	"r2_buckets": [
+		{
+			"binding": "MEDIA",
+			"bucket_name": "portobuck","preview_bucket_name": "portobuck",
+		},
+	],
+	"observability": {
+		"enabled": true,
+	},
+	"worker_loaders": [
+		{
+			"binding": "LOADER",
+		},
+	],
+}
